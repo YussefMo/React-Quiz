@@ -1,0 +1,14 @@
+function NextButton({ dispatch, answer, index, numQuestions }) {
+    const hasAnswer = answer !== null
+    if (index < numQuestions - 1) {return (
+        <>
+            {hasAnswer && <button className="btn btn-ui" onClick={() => dispatch({ type: 'nextQuestion' })}>Next</button>}
+        </>
+    )} else {return (
+        <>
+            {hasAnswer && <button className="btn btn-ui" onClick={() => dispatch({ type: 'finishQuiz' })}>Finish Quiz</button>}
+        </>
+    )}
+}
+
+export default NextButton
