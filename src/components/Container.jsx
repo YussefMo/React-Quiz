@@ -89,7 +89,7 @@ function Container() {
     const [{ questions, status, index, answer, points, highscore, quizTimer }, dispatch] = useReducer(reduce, initialState)
 
     useEffect(function () {
-        axios('../../data/questions.json')
+        axios(`${import.meta.env.BASE_URL}data/questions.json`)
             .then(response => {
                 dispatch({ type: 'receivedData', payload: response.data.questions })
             })
