@@ -266,3 +266,44 @@ progress {
 footer {
   margin-top: 30px;
 }
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  body {
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  .app {
+    padding: 1rem;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .app-header {
+    width: 100%;
+    flex-flow: column wrap;
+  }
+
+  img{
+    padding-bottom: 1rem;
+  }
+
+  .options {
+    gap: 0.8rem;
+  }
+
+  .btn-option {
+    margin: 0.8rem 0;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+
+  .counter {
+    font-size: 1.6rem;
+  }
+}
