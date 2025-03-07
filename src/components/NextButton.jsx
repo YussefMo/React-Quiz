@@ -1,4 +1,7 @@
-function NextButton({ dispatch, answer, index, numQuestions }) {
+import { useQuestionsContext } from "../context/QuestionsContext"
+
+function NextButton() {
+    const { dispatch, answer, index, numQuestions } = useQuestionsContext()
     const hasAnswer = answer !== null
     if (index < numQuestions - 1) {return (
         <>

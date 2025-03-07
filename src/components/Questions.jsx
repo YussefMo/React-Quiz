@@ -1,5 +1,10 @@
-function Questions({ question, dispatch, answer }) {
+import { useQuestionsContext } from "../context/QuestionsContext"
+
+function Questions() {
+    const { questions , dispatch, answer, index } = useQuestionsContext()
+
     const hasAnswer = answer !== null
+    const question = questions[index]
 
     return (
         <div>
